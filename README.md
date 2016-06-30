@@ -62,8 +62,9 @@ The appendixC directory contains Qt Jambi examples.
 
 ### 9. Drag and Drop
 -       chap09/projectchooser
-1-0. Item View Classes
- -       chap10/booleanparser
+
+### 10. Item View Classes
+-        chap10/booleanparser
 -        chap10/cities
 -        chap10/colornames
 -        chap10/coordinatesetter
@@ -73,18 +74,22 @@ The appendixC directory contains Qt Jambi examples.
 -        chap10/settingsviewer
 -        chap10/teamleaders
 -        chap10/trackeditor
+
 ### 12. Input/Output
 -        chap12/imageconverter
 -        chap12/imagespace
 -        chap12/tidy
+
 ### 13. Databases
 -        chap13/scooters
 -        chap13/staffmanager
+
 ### 14. Multithreading
 -        chap14/imagepro
 -        chap14/semaphores
 -        chap14/threads
 -        chap14/waitconditions
+
 ### 15. Networking
 -        chap15/ftpget
 -        chap15/httpget
@@ -93,18 +98,22 @@ The appendixC directory contains Qt Jambi examples.
 -        chap15/tripserver
 -        chap15/weatherballoon
 -        chap15/weatherstation
+
 ### 16. XML
 -        chap16/domparser
 -        chap16/saxhandler
 -        chap16/xmlstreamreader
 -        chap16/xmlstreamwriter
+
 ### 19. Look and Feel Customization
 -        chap19/bronze
 -        chap19/candy
+
 ### 20. 3D Graphics
 -        chap20/teapots
 -        chap20/tetrahedron
 -        chap20/vowelcube
+
 ### 21. Creating Plugins
 -        chap21/basiceffectsplugin
 -        chap21/bronze
@@ -112,15 +121,18 @@ The appendixC directory contains Qt Jambi examples.
 -        chap21/cursorplugin
 -        chap21/extraeffectsplugin
 -        chap21/textart
+
 ### 22. Application Scripting
 -        chap22/calculator
 -        chap22/gaspump
 -        chap22/htmleditor
+
 ### 23. Platform-Specific Features
 -        chap23/addressbook
 -        chap23/bouncer
 -        chap23/mediaplayer
 -        chap23/tictactoe
+
 ### 24. Embedded Programming
 -        chap24/expenses
 -        chap24/unitconverter
