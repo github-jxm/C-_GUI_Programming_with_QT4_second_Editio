@@ -13,17 +13,16 @@ FindDialog::FindDialog(QWidget *parent)
     backwardCheckBox = new QCheckBox(tr("Search &backward"));
 
     findButton = new QPushButton(tr("&Find"));
-    findButton->setDefault(true);
+    findButton->setDefault(true);     // 设置 对话框 默认按钮  / Enter键
     findButton->setEnabled(false);
 
     closeButton = new QPushButton(tr("Close"));
 
+     // 链接 信号 和 槽
     connect(lineEdit, SIGNAL(textChanged(const QString &)),
-            this, SLOT(enableFindButton(const QString &)));
-    connect(findButton, SIGNAL(clicked()),
-            this, SLOT(findClicked()));
-    connect(closeButton, SIGNAL(clicked()),
-            this, SLOT(close()));
+                    this,  SLOT(enableFindButton(const QString &)));
+    connect(findButton, SIGNAL(clicked()),  this, SLOT(findClicked()));
+    connect(closeButton, SIGNAL(clicked()),  this, SLOT(close()));
 
     QHBoxLayout *topLeftLayout = new QHBoxLayout;
     topLeftLayout->addWidget(label);
