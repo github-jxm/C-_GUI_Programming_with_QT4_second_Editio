@@ -21,11 +21,11 @@ private slots:
     void reapplyFilter();
 
 private:
-    QStringListModel *sourceModel;
+    QStringListModel      *sourceModel;
     QSortFilterProxyModel *proxyModel;
     QListView *listView;
-    QLabel *filterLabel;
-    QLabel *syntaxLabel;
+    QLabel    *filterLabel;
+    QLabel    *syntaxLabel;
     QLineEdit *filterLineEdit;
     QComboBox *syntaxComboBox;
 };

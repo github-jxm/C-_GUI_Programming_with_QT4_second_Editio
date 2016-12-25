@@ -23,7 +23,7 @@ private slots:
 private:
     QListView *listView;
     QDialogButtonBox *buttonBox;
-    QStringListModel *model;
+    QStringListModel *model;   // 存储一个字符串列表
 };
 
 #endif

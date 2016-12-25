@@ -14,8 +14,7 @@ FlowChartSymbolPicker::FlowChartSymbolPicker(
     QMapIterator<int, QString> i(symbolMap);
     while (i.hasNext()) {
         i.next();
-        QListWidgetItem *item = new QListWidgetItem(i.value(),
-                                                    listWidget);
+        QListWidgetItem *item = new QListWidgetItem(i.value(), listWidget);
         item->setIcon(iconForSymbol(i.value()));
         item->setData(Qt::UserRole, i.key());
     }
@@ -39,8 +38,9 @@ void FlowChartSymbolPicker::done(int result)
     id = -1;
     if (result == QDialog::Accepted) {
         QListWidgetItem *item = listWidget->currentItem();
-        if (item)
+        if (item){
             id = item->data(Qt::UserRole).toInt();
+        }
     }
     QDialog::done(result);
 }

@@ -34,13 +34,14 @@ QVariant CurrencyModel::data(const QModelIndex &index, int role) const
         QString rowCurrency = currencyAt(index.row());
         QString columnCurrency = currencyAt(index.column());
 
-        if (currencyMap.value(rowCurrency) == 0.0)
+        if (currencyMap.value(rowCurrency) == 0.0){
             return "####";
+        }
 
         double amount = currencyMap.value(columnCurrency)
                         / currencyMap.value(rowCurrency);
 
-        return QString("%1").arg(amount, 0, 'f', 4);
+        return QString("%1").arg(amount, 0, 'f', 4); // 四位小数
     }
     return QVariant();
 }

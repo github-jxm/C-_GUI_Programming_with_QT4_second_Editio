@@ -22,9 +22,9 @@ ColorNamesDialog::ColorNamesDialog(QWidget *parent)
 
     syntaxLabel = new QLabel(tr("&Pattern syntax:"));
     syntaxComboBox = new QComboBox;
-    syntaxComboBox->addItem(tr("Regular expression"), QRegExp::RegExp);
-    syntaxComboBox->addItem(tr("Wildcard"), QRegExp::Wildcard);
-    syntaxComboBox->addItem(tr("Fixed string"), QRegExp::FixedString);
+    syntaxComboBox->addItem(tr("Regular expression"), QRegExp::RegExp); /* 正则表达式*/
+    syntaxComboBox->addItem(tr("Wildcard"), QRegExp::Wildcard);   		 /* 通配符 */
+    syntaxComboBox->addItem(tr("Fixed string"), QRegExp::FixedString);  /* 固定字符串*/
     syntaxLabel->setBuddy(syntaxComboBox);
 
     connect(filterLineEdit, SIGNAL(textChanged(const QString &)),

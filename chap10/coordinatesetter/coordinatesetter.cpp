@@ -50,6 +50,7 @@ void CoordinateSetter::done(int result)
     QDialog::done(result);
 }
 
+// 增加行
 void CoordinateSetter::addRow()
 {
     int row = tableWidget->rowCount();
@@ -57,12 +58,12 @@ void CoordinateSetter::addRow()
     tableWidget->insertRow(row);
 
     QTableWidgetItem *item0 = new QTableWidgetItem;
-    item0->setTextAlignment(Qt::AlignRight | Qt::AlignVCenter);
+    item0->setTextAlignment(Qt::AlignRight | Qt::AlignVCenter);  // 水平靠右，垂直居中
     tableWidget->setItem(row, 0, item0);
 
     QTableWidgetItem *item1 = new QTableWidgetItem;
     item1->setTextAlignment(Qt::AlignRight | Qt::AlignVCenter);
     tableWidget->setItem(row, 1, item1);
 
-    tableWidget->setCurrentItem(item0);
+    tableWidget->setCurrentItem(item0);  //设置　item0 选中状态
 }

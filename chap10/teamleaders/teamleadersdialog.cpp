@@ -11,8 +11,8 @@ TeamLeadersDialog::TeamLeadersDialog(const QStringList &leaders,
 
     listView = new QListView;
     listView->setModel(model);
-    listView->setEditTriggers(QAbstractItemView::AnyKeyPressed
-                              | QAbstractItemView::DoubleClicked);
+    listView->setEditTriggers(QAbstractItemView::AnyKeyPressed		/* 按任意键编辑 */
+                              | QAbstractItemView::DoubleClicked); /* 双击编辑 */
 
     buttonBox = new QDialogButtonBox();
     QPushButton *insertButton = buttonBox->addButton(tr("&Insert"),

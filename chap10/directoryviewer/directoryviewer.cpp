@@ -17,8 +17,8 @@ DirectoryViewer::DirectoryViewer(QWidget *parent)
     treeView->header()->setClickable(true);
 
     QModelIndex index = model->index(QDir::currentPath());
-    treeView->expand(index);
-    treeView->scrollTo(index);
+    treeView->expand(index);    // ???
+    treeView->scrollTo(index);  // 打开父对象，到根节点 滚动到当前项
     treeView->resizeColumnToContents(0);
 
     buttonBox = new QDialogButtonBox(Qt::Horizontal);
@@ -28,8 +28,7 @@ DirectoryViewer::DirectoryViewer(QWidget *parent)
             QDialogButtonBox::ActionRole);
     buttonBox->addButton(tr("&Quit"), QDialogButtonBox::AcceptRole);
 
-    connect(mkdirButton, SIGNAL(clicked()),
-            this, SLOT(createDirectory()));
+    connect(mkdirButton, SIGNAL(clicked()), this, SLOT(createDirectory()));
     connect(removeButton, SIGNAL(clicked()), this, SLOT(remove()));
     connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
 
@@ -51,7 +50,7 @@ void DirectoryViewer::createDirectory()
                               tr("Create Directory"),
                               tr("Directory name"));
     if (!dirName.isEmpty()) {
-        if (!model->mkdir(index, dirName).isValid())
+        if (!model->mkdir(index, dirName).isValid())  // 创建文件夹
             QMessageBox::information(this, tr("Create Directory"),
                     tr("Failed to create the directory"));
     }
@@ -65,9 +64,9 @@ void DirectoryViewer::remove()
 
     bool ok;
     if (model->fileInfo(index).isDir()) {
-        ok = model->rmdir(index);
+        ok = model->rmdir(index);    // 删除文件夹
     } else {
-        ok = model->remove(index);
+        ok = model->remove(index);   // 删除文件
     }
     if (!ok)
         QMessageBox::information(this, tr("Remove"),

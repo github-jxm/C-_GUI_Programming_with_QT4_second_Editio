@@ -12,11 +12,11 @@ SettingsViewer::SettingsViewer(QWidget *parent)
     treeWidget->setColumnCount(2);
     treeWidget->setHeaderLabels(
             QStringList() << tr("Key") << tr("Value"));
-    treeWidget->header()->setResizeMode(0, QHeaderView::Stretch);
+    treeWidget->header()->setResizeMode(0, QHeaderView::Stretch); // 列宽，固定
     treeWidget->header()->setResizeMode(1, QHeaderView::Stretch);
 
     buttonBox = new QDialogButtonBox(QDialogButtonBox::Open
-                                     | QDialogButtonBox::Close);
+                                      | QDialogButtonBox::Close);
 
     connect(buttonBox, SIGNAL(accepted()), this, SLOT(open()));
     connect(buttonBox, SIGNAL(rejected()), this, SLOT(close()));

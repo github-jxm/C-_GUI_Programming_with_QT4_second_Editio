@@ -55,6 +55,7 @@ The appendixC directory contains Qt Jambi examples.
 
 ### 7. Event Processing
 -        chap07/ticker
+
 ### 8. 2D Graphics
 -       chap08/cityscape
 -       chap08/diagram
@@ -64,16 +65,19 @@ The appendixC directory contains Qt Jambi examples.
 -       chap09/projectchooser
 
 ### 10. Item View Classes
--        chap10/booleanparser
--        chap10/cities
--        chap10/colornames
--        chap10/coordinatesetter
--        chap10/currencies
--        chap10/directoryviewer
--        chap10/flowchartsymbolpicker
--        chap10/settingsviewer
--        chap10/teamleaders
--        chap10/trackeditor
+- 10.1
+	-    chap10/flowchartsymbolpicker
+	-    chap10/coordinatesetter
+	-    chap10/settingsviewer
+- 10.2
+    -    chap10/teamleaders
+    -    chap10/colornames
+    -    chap10/directoryviewer
+- 10.3
+    -    chap10/currencies
+    -    chap10/booleanparser
+- 10.4
+    -    chap10/trackeditor
 
 ### 12. Input/Output
 -        chap12/imageconverter
