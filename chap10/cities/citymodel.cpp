@@ -64,20 +64,23 @@ QVariant CityModel::headerData(int section,
 {
     if (role == Qt::DisplayRole)
         return cities[section];
+
     return QVariant();
 }
 
 Qt::ItemFlags CityModel::flags(const QModelIndex &index) const
 {
     Qt::ItemFlags flags = QAbstractItemModel::flags(index);
-    if (index.row() != index.column())
+    if (index.row() != index.column()){
         flags |= Qt::ItemIsEditable;
+    }
     return flags;
 }
 
 int CityModel::offsetOf(int row, int column) const
 {
-    if (row < column)
+    if (row < column){
         qSwap(row, column);
+    }
     return (row * (row - 1) / 2) + column;
 }
