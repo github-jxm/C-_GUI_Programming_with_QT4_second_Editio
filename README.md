@@ -73,10 +73,10 @@ The appendixC directory contains Qt Jambi examples.
     -    chap10/teamleaders
     -    chap10/colornames
     -    chap10/directoryviewer
-- 10.3
+- 10.3 实现自定义模型
     -    chap10/currencies
     -    chap10/booleanparser
-- 10.4
+- 10.4 实现自定义委托
     -    chap10/trackeditor
 
 ### 12. Input/Output
